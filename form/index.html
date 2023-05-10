@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="airdatepicker/air-datepicker.css" />
+    <title>Форма</title>
+  </head>
+  <body>
+    <form class="form" action="">
+      <h1 class="form_title">Форма</h1>
+      <div class="form_group">
+        <!--Выбор башни-->
+        <div class="tower_group group">
+          <label for="tower" class="form_group-subtitle">Выберите башню</label>
+
+          <select class="form_tower" name="tower" id="tower">
+            <option value="A">Башня А</option>
+            <option value="B">Башня Б</option>
+          </select>
+        </div>
+        <!--Выбор этажа-->
+        <div class="floor_group group">
+          <label for="floor" class="form_group-subtitle">Выберите этаж</label>
+
+          <select class="form_floor" name="floor" id="floor">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+          </select>
+        </div>
+        <!--Выбор переговорки-->
+        <div class="room_group group">
+          <label for="conference_room" class="form_group-subtitle"
+            >Выберите переговорку</label
+          >
+          <select
+            class="form_conference_room"
+            name="conference_room"
+            id="conference_room"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <!--Выбор-->
+        <div class="date_group group">
+          <label for="date" class="form_group-subtitle">Выберите дату</label>
+          <input
+            required
+            autocomplete="off"
+            name="date"
+            placeholder="Выберите дату"
+            class="form_control"
+            type="text"
+            id="airdatepicker"
+          />
+        </div>
+        <div class="time_group group">
+          <div class="time_group-start">
+          <label for="start-time">Начальное время</label>
+          <input type="time" id="start-time" name="start-time" required/>
+        </div>
+        <div class="time_group-end">
+          <label for="end-time">Конечное время</label>
+          <input type="time" id="end-time" name="end-time" required/>
+        </div>
+      </div>
+        <div class="comment_group group">
+          <label for="comment">Напишите комментарий</label>
+          <textarea name="comment" id="" rows="8"></textarea>
+        </div>
+      </div>
+      <div class="button_group">
+        <button class="form_button btn1" type="submit" id="send">
+          Отправить
+        </button>
+        <button class="form_button btn2" type="reset">Очистить</button>
+      </div>
+    </form>
+
+    <script src="airdatepicker/air-datepicker.js"></script>
+    <script>
+      new AirDatepicker("#airdatepicker", {
+        autoClose: true,
+        isMobile: true,
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

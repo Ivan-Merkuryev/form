@@ -1,0 +1,135 @@
+@import "vars";
+
+body {
+  font-family: "Kanit", sans-serif;
+  font-size: @fSize;
+}
+
+.form {
+  width: 60%;
+  margin: 0 auto;
+
+  border-radius: 20px;
+  box-shadow: 0 0 6px 1px #2258ce;
+  background: @primary;
+  .form_title {
+    text-align: center;
+    padding-top: 50px;
+    font-size: @fSizeH1;
+  }
+  .form_group {
+    margin: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    .group {
+      margin-top: 20px;
+
+      width: 50%;
+      margin-top: 8%;
+    }
+  }
+}
+select,
+input {
+  font-family: "Kanit", sans-serif;
+  font-size: @fSize;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  width: 40%;
+  background-color: #B1D8FA;
+  color: #333;
+  outline: none;
+}
+select:focus,
+input:focus,
+textarea:focus {
+  border: 2px solid #8e1574;
+}
+
+.time_group {
+  display: flex;
+  order: 1;
+  input {
+    width: 70%;
+  }
+}
+
+textarea {
+  width: 80%;
+  border-radius: 5px;
+  height: 2em;
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+  border-color: #bfbfbf;
+  background-color: #B1D8FA;
+  padding: 1%;
+}
+textarea::-webkit-scrollbar {
+  width: 0px;
+}
+
+.button_group {
+  display: flex;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  justify-content: space-evenly;
+  .form_button {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: "Kanit", sans-serif;
+    font-size: @fSize;
+    color: white;
+    box-shadow: 0 0 3px 1px #7f7e7e;
+  }
+  .btn1 {
+    background-color: rgb(83, 188, 253);
+  }
+  .btn1:hover {
+    background-color: rgb(43, 169, 247);
+  }
+  .btn2 {
+    background-color: #ccc;
+  }
+  .btn2:hover {
+    background-color: #9b9a9a;
+  }
+}
+
+@media (max-width: 1150px) {
+  .form {
+    width: 70%;
+  }
+}
+@media (max-width: 900px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (max-width: 770px) {
+  .form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 660px) {
+  .form {
+    width: 99%;
+  }
+  input,
+  select {
+    width: 70%;
+  }
+  .time_group {
+    input {
+      width: 75%;
+      font-size: calc(8px + 0.65vw);
+    }
+  }
+  .form_group {
+    margin: 0 1%;
+  }
+}
